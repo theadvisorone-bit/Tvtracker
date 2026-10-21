@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lets the app ask you (visibly, in Settings) for permission to read
+         app-open counts. It cannot read anything else about other apps. -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"
+        xmlns:tools="http://schemas.android.com/tools" />
+
+    <!-- Needed to send the daily count to your Supabase API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="TV Opens Tracker"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:theme="@style/Theme.AppCompat.Light">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
